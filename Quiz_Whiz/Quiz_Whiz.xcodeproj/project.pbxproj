@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5FD530B42A74D119005C7121 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD530B32A74D119005C7121 /* CategoriesViewController.swift */; };
 		5FD530B62A74D277005C7121 /* DifficultiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD530B52A74D277005C7121 /* DifficultiesViewController.swift */; };
+		811DF4DC2A76CB5300D7977D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811DF4DB2A76CB5300D7977D /* User.swift */; };
+		811DF4DF2A76CD4400D7977D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811DF4DE2A76CD4400D7977D /* HomeViewController.swift */; };
+		811DF4E12A76CFBE00D7977D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 811DF4E02A76CFBE00D7977D /* UserViewController.swift */; };
 		81D315452A5DAC670069E140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D315442A5DAC670069E140 /* AppDelegate.swift */; };
 		81D315472A5DAC670069E140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D315462A5DAC670069E140 /* SceneDelegate.swift */; };
 		81D315492A5DAC670069E140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D315482A5DAC670069E140 /* ViewController.swift */; };
@@ -20,6 +23,9 @@
 /* Begin PBXFileReference section */
 		5FD530B32A74D119005C7121 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		5FD530B52A74D277005C7121 /* DifficultiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultiesViewController.swift; sourceTree = "<group>"; };
+		811DF4DB2A76CB5300D7977D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		811DF4DE2A76CD4400D7977D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		811DF4E02A76CFBE00D7977D /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		81D315412A5DAC670069E140 /* Quiz_Whiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz_Whiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D315442A5DAC670069E140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D315462A5DAC670069E140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +47,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		811DF4DA2A76CB4300D7977D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				811DF4DB2A76CB5300D7977D /* User.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		811DF4DD2A76CD3400D7977D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				811DF4DE2A76CD4400D7977D /* HomeViewController.swift */,
+				811DF4E02A76CFBE00D7977D /* UserViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		81D315382A5DAC670069E140 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +83,8 @@
 		81D315432A5DAC670069E140 /* Quiz_Whiz */ = {
 			isa = PBXGroup;
 			children = (
+				811DF4DD2A76CD3400D7977D /* Controllers */,
+				811DF4DA2A76CB4300D7977D /* Classes */,
 				81D315442A5DAC670069E140 /* AppDelegate.swift */,
 				81D315462A5DAC670069E140 /* SceneDelegate.swift */,
 				81D315482A5DAC670069E140 /* ViewController.swift */,
@@ -145,9 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D315492A5DAC670069E140 /* ViewController.swift in Sources */,
+				811DF4E12A76CFBE00D7977D /* UserViewController.swift in Sources */,
 				81D315452A5DAC670069E140 /* AppDelegate.swift in Sources */,
+				811DF4DC2A76CB5300D7977D /* User.swift in Sources */,
 				5FD530B42A74D119005C7121 /* CategoriesViewController.swift in Sources */,
 				81D315472A5DAC670069E140 /* SceneDelegate.swift in Sources */,
+				811DF4DF2A76CD4400D7977D /* HomeViewController.swift in Sources */,
 				5FD530B62A74D277005C7121 /* DifficultiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
