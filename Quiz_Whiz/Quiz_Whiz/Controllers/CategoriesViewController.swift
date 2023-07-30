@@ -15,6 +15,9 @@ class CategoriesViewController: UIViewController {
     @IBOutlet weak var sportButton: UIButton!
     @IBOutlet weak var factsButton: UIButton!
     
+    //User variable that will get passed through entire application
+    var user:User!
+    
     //local variable
     var categorySelected: String!
     

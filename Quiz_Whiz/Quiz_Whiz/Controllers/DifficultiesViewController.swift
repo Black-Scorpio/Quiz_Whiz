@@ -16,6 +16,8 @@ class DifficultiesViewController: UIViewController {
     
     @IBOutlet weak var testLabel: UILabel!
     
+    var user:User!
+    
     var category: String!
     
     override func viewDidLoad() {
