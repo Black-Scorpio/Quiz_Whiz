@@ -9,12 +9,13 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
 
+    //outlets
     @IBOutlet weak var animalButton: UIButton!
     @IBOutlet weak var musicButton: UIButton!
     @IBOutlet weak var sportButton: UIButton!
     @IBOutlet weak var factsButton: UIButton!
     
-    @IBOutlet weak var testNext: UIButton!
+    //local variable
     var categorySelected: String!
     
     override func viewDidLoad() {
@@ -31,19 +32,20 @@ class CategoriesViewController: UIViewController {
     
     //checking which button is pressed
     @IBAction func checkCategoryPressed(_ sender: UIButton) {
-        if sender.tag == 1{
+        if sender.tag == 1{ //'animals' button
             categorySelected = sender.currentTitle
         }
-        else if sender.tag == 2{
+        else if sender.tag == 2{ //'music' button
             categorySelected = sender.currentTitle
         }
-        else if sender.tag == 3{
+        else if sender.tag == 3{ //'sport' button
             categorySelected = sender.currentTitle
         }
-        else if sender.tag == 4{
+        else if sender.tag == 4{ //'random facts' button
             categorySelected = sender.currentTitle
         }
         
+        //to navigate to next difficulties screen 
         let difficultiesVC:DifficultiesViewController = self.storyboard?.instantiateViewController(withIdentifier: "DifficultiesViewController") as! DifficultiesViewController
         difficultiesVC.category = categorySelected
         self.navigationController?.pushViewController(difficultiesVC, animated: true)

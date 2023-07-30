@@ -20,6 +20,8 @@ class DifficultiesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //removes the 'back' navigation item
+        self.navigationItem.hidesBackButton = true
         testLabel.text = category
         // Do any additional setup after loading the view.
     }
