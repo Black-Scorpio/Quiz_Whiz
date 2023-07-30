@@ -11,6 +11,9 @@ class UserViewController: UIViewController {
 
     @IBOutlet weak var userNameText: UITextField!
     
+    
+    var user:User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
