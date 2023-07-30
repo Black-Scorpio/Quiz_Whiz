@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5F45091C2A76F08E006341EA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F45091B2A76F08D006341EA /* Category.swift */; };
 		5FD530B42A74D119005C7121 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD530B32A74D119005C7121 /* CategoriesViewController.swift */; };
 		5FD530B62A74D277005C7121 /* DifficultiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD530B52A74D277005C7121 /* DifficultiesViewController.swift */; };
 		5FE60BD52A76E13300737F78 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FE60BD42A76E13300737F78 /* QuizViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F45091B2A76F08D006341EA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5FD530B32A74D119005C7121 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		5FD530B52A74D277005C7121 /* DifficultiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultiesViewController.swift; sourceTree = "<group>"; };
 		5FE60BD42A76E13300737F78 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				811DF4DB2A76CB5300D7977D /* User.swift */,
+				5F45091B2A76F08D006341EA /* Category.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				81D315472A5DAC670069E140 /* SceneDelegate.swift in Sources */,
 				811DF4DF2A76CD4400D7977D /* HomeViewController.swift in Sources */,
 				5FD530B62A74D277005C7121 /* DifficultiesViewController.swift in Sources */,
+				5F45091C2A76F08E006341EA /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

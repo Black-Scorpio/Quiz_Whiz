@@ -24,12 +24,14 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let categories = Category(categoryOne: "Animals", categoryTwo: "Music", categoryThree: "Sport", categoryFour: "Random Facts")
+        
         //setting button title when button is pressed
         //not sure why if this block of code is deleted, it does not show the button title...
-        animalButton.setTitle("animals", for: .highlighted)
-        musicButton.setTitle("music", for: .highlighted)
-        sportButton.setTitle("sport", for: .highlighted)
-        factsButton.setTitle("random facts", for: .highlighted)
+        animalButton.setTitle(categories.categoryOne, for: .highlighted)
+        musicButton.setTitle(categories.categoryTwo, for: .highlighted)
+        sportButton.setTitle(categories.categoryThree, for: .highlighted)
+        factsButton.setTitle(categories.categoryFour, for: .highlighted)
         // Do any additional setup after loading the view.
     }
     
