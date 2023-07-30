@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FD530B42A74D119005C7121 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD530B32A74D119005C7121 /* CategoriesViewController.swift */; };
+		5FD530B62A74D277005C7121 /* DifficultiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD530B52A74D277005C7121 /* DifficultiesViewController.swift */; };
 		81D315452A5DAC670069E140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D315442A5DAC670069E140 /* AppDelegate.swift */; };
 		81D315472A5DAC670069E140 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D315462A5DAC670069E140 /* SceneDelegate.swift */; };
 		81D315492A5DAC670069E140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D315482A5DAC670069E140 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5FD530B32A74D119005C7121 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		5FD530B52A74D277005C7121 /* DifficultiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultiesViewController.swift; sourceTree = "<group>"; };
 		81D315412A5DAC670069E140 /* Quiz_Whiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quiz_Whiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D315442A5DAC670069E140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81D315462A5DAC670069E140 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				81D3154D2A5DAC680069E140 /* Assets.xcassets */,
 				81D3154F2A5DAC680069E140 /* LaunchScreen.storyboard */,
 				81D315522A5DAC680069E140 /* Info.plist */,
+				5FD530B32A74D119005C7121 /* CategoriesViewController.swift */,
+				5FD530B52A74D277005C7121 /* DifficultiesViewController.swift */,
 			);
 			path = Quiz_Whiz;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			files = (
 				81D315492A5DAC670069E140 /* ViewController.swift in Sources */,
 				81D315452A5DAC670069E140 /* AppDelegate.swift in Sources */,
+				5FD530B42A74D119005C7121 /* CategoriesViewController.swift in Sources */,
 				81D315472A5DAC670069E140 /* SceneDelegate.swift in Sources */,
+				5FD530B62A74D277005C7121 /* DifficultiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
