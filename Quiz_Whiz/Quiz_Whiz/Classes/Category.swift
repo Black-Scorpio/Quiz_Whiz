@@ -19,6 +19,4 @@ class Category {
         self.categoryThree = categoryThree
         self.categoryFour = categoryFour
     }
-
-    // You can also define methods or other functionalities in this class
 }

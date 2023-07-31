@@ -9,28 +9,27 @@ import UIKit
 
 class DifficultiesViewController: UIViewController {
     
-    @IBOutlet weak var easyButton: UIButton!
-    @IBOutlet weak var mediumButton: UIButton!
-    @IBOutlet weak var hardButton: UIButton!
-    @IBOutlet weak var backButton: UIButton!
+//    @IBOutlet weak var easyButton: UIButton!
+//    @IBOutlet weak var mediumButton: UIButton!
+//    @IBOutlet weak var hardButton: UIButton!
+//    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var categoryLabel: UILabel!
     
+    //variables passed on
     var user:User!
     var category: String!
     var difficultySelected: String!
     
+    //create difficulty levels
+    let difficulties = Difficulty(levelOne: "Easy", levelTwo: "Medium", levelThree: "Hard")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         //removes the 'back' navigation item
         self.navigationItem.hidesBackButton = true
-        
-        //setting button title when button is pressed
-        //not sure why if this block of code is deleted, it does not show the button title...
-        easyButton.setTitle("easy", for: .highlighted)
-        mediumButton.setTitle("medium", for: .highlighted)
-        hardButton.setTitle("hard", for: .highlighted)
+        //showing category selected from previous screen
         categoryLabel.text = "Category Selected: \(category!)"
-        
         // Do any additional setup after loading the view.
     }
     
@@ -41,13 +40,13 @@ class DifficultiesViewController: UIViewController {
     //checking which button is pressed
     @IBAction func checkCategoryPressed(_ sender: UIButton) {
         if sender.tag == 5{ //'easy' button
-            difficultySelected = sender.currentTitle
+            difficultySelected = difficulties.levelOne
         }
         else if sender.tag == 6{ //'medium' button
-            difficultySelected = sender.currentTitle
+            difficultySelected = difficulties.levelTwo
         }
         else if sender.tag == 7{ //'hard' button
-            difficultySelected = sender.currentTitle
+            difficultySelected = difficulties.levelThree
         }
         
         //to navigate to next difficulties screen

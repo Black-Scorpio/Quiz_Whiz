@@ -81,12 +81,6 @@
                         <color key="backgroundColor" red="0.96588936237373735" green="0.90028455701239829" blue="0.42869984004830891" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vj8-jn-XxK"/>
-                    <connections>
-                        <outlet property="animalButton" destination="e12-aT-P15" id="VFH-a6-ufF"/>
-                        <outlet property="factsButton" destination="DfY-Kj-Bbd" id="f3f-Ky-8M4"/>
-                        <outlet property="musicButton" destination="UV0-FY-5hm" id="VGF-MV-rQ6"/>
-                        <outlet property="sportButton" destination="nED-hl-itv" id="1gb-jD-aH9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zVZ-lw-KIf" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,11 +165,7 @@
                         <color key="backgroundColor" red="0.96588936240000001" green="0.90028455699999999" blue="0.42869984" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="fWM-z5-9vC" id="leP-8t-CuE"/>
                         <outlet property="categoryLabel" destination="3x8-kT-OCJ" id="TGw-RS-rwe"/>
-                        <outlet property="easyButton" destination="8l0-r4-fax" id="1q0-Ij-wnV"/>
-                        <outlet property="hardButton" destination="wUt-Zu-GqU" id="TIS-VE-1xp"/>
-                        <outlet property="mediumButton" destination="ztt-8d-WjE" id="nje-Al-ZHv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JLr-xe-7sS" sceneMemberID="firstResponder"/>
