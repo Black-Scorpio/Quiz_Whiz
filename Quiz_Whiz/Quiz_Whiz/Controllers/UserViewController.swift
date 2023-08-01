@@ -28,8 +28,8 @@ class UserViewController: UIViewController {
     
     @IBAction func saveUsername(_ sender: UIButton) {
         // Check if userNameText has a value
-        if  !userNameText.text!.isEmpty {
-            user.name = userNameText.text!
+        if !userNameText.text!.isEmpty {
+            user = User(name: userNameText.text!)
         } else {
             showAlert(withTitle: "Empty Name", message: "Please enter a valid username.")
         }
