@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		022FC0692A79BAA500165459 /* EasyQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022FC0682A79BAA500165459 /* EasyQuizViewController.swift */; };
 		5F45091C2A76F08E006341EA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F45091B2A76F08D006341EA /* Category.swift */; };
 		5FD530B42A74D119005C7121 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD530B32A74D119005C7121 /* CategoriesViewController.swift */; };
 		5FD530B62A74D277005C7121 /* DifficultiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD530B52A74D277005C7121 /* DifficultiesViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		022FC0682A79BAA500165459 /* EasyQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyQuizViewController.swift; sourceTree = "<group>"; };
 		5F45091B2A76F08D006341EA /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		5FD530B32A74D119005C7121 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		5FD530B52A74D277005C7121 /* DifficultiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultiesViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				811DF4E02A76CFBE00D7977D /* UserViewController.swift */,
 				811DF4E22A76D78700D7977D /* FinalViewController.swift */,
 				5FE60BD42A76E13300737F78 /* QuizViewController.swift */,
+				022FC0682A79BAA500165459 /* EasyQuizViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D315492A5DAC670069E140 /* ViewController.swift in Sources */,
+				022FC0692A79BAA500165459 /* EasyQuizViewController.swift in Sources */,
 				5FE60BD52A76E13300737F78 /* QuizViewController.swift in Sources */,
 				5FE301AC2A7750FD00730752 /* Difficulty.swift in Sources */,
 				811DF4E32A76D78700D7977D /* FinalViewController.swift in Sources */,

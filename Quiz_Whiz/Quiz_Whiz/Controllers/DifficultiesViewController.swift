@@ -50,10 +50,10 @@ class DifficultiesViewController: UIViewController {
         }
         
         //to navigate to next difficulties screen
-        let quizVC:QuizViewController = self.storyboard?.instantiateViewController(withIdentifier: "QuizViewController") as! QuizViewController
-        quizVC.categoryDecided = category
-        quizVC.difficultyDecided = difficultySelected
-        self.navigationController?.pushViewController(quizVC, animated: true)
+        let easyQuizVC:EasyQuizViewController = self.storyboard?.instantiateViewController(withIdentifier: "EasyQuizViewController") as! EasyQuizViewController
+        easyQuizVC.categoryDecided = category
+        easyQuizVC.difficultyDecided = difficultySelected
+        self.navigationController?.pushViewController(easyQuizVC, animated: true)
     }
     
     /*
