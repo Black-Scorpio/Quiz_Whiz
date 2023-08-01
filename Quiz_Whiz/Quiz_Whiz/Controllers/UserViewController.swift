@@ -12,7 +12,9 @@ class UserViewController: UIViewController {
     @IBOutlet weak var userNameText: UITextField!
     
     
-    var user:User!
+    @IBOutlet weak var userNameLabel: UILabel!
+    
+    var user = User(name: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +23,23 @@ class UserViewController: UIViewController {
     }
     
     @IBAction func chooseTapped(_ sender: Any) {
-        let categoryVC = self.storyboard?.instantiateViewController(withIdentifier: "CategoryVC") as! CategoriesViewController
-        // Navigating to UserViewController
-        self.navigationController?.pushViewController(categoryVC, animated: true)
+        // Check if user name is not empty
+            if user.name.isEmpty {
+                showAlert(withTitle: "Empty Name", message: "Please enter a valid username.")
+            } else {
+                let categoryVC = self.storyboard?.instantiateViewController(withIdentifier: "CategoryVC") as! CategoriesViewController
+                // Navigating to UserViewController
+                categoryVC.user = user
+                self.navigationController?.pushViewController(categoryVC, animated: true)
+                
+            }
     }
     
     @IBAction func saveUsername(_ sender: UIButton) {
         // Check if userNameText has a value
         if !userNameText.text!.isEmpty {
-            user = User(name: userNameText.text!)
+            user.name = userNameText.text!
+            userNameLabel.text = "Username: \(userNameText.text!)"
         } else {
             showAlert(withTitle: "Empty Name", message: "Please enter a valid username.")
         }
