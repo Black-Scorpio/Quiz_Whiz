@@ -20,7 +20,7 @@ class UserViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
+    //test
     @IBAction func chooseTapped(_ sender: Any) {
         let categoryVC = self.storyboard?.instantiateViewController(withIdentifier: "CategoryVC") as! CategoriesViewController
        // navigating to UserViewController
