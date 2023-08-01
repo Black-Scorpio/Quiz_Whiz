@@ -40,6 +40,8 @@ class CategoriesViewController: UIViewController {
         //to navigate to next difficulties screen 
         let difficultiesVC:DifficultiesViewController = self.storyboard?.instantiateViewController(withIdentifier: "DifficultiesViewController") as! DifficultiesViewController
         difficultiesVC.category = categorySelected
+        //This passes the user to the difficulties view
+        difficultiesVC.user = user
         self.navigationController?.pushViewController(difficultiesVC, animated: true)
     }
     
