@@ -350,10 +350,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2C-Ph-Vxf">
-                                                <rect key="frame" x="24" y="43" width="345" height="211"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIk-kT-jQ8">
                                                 <rect key="frame" x="24" y="406" width="345" height="75"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -363,6 +359,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="button1Pressed:" destination="Db3-sr-Xvd" eventType="touchUpInside" id="n3I-T1-xUM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ss-by-XFk">
                                                 <rect key="frame" x="24" y="489" width="345" height="75"/>
@@ -408,6 +407,10 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g2C-Ph-Vxf">
+                                                <rect key="frame" x="24" y="43" width="345" height="211"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
@@ -419,7 +422,11 @@
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                     <connections>
+                        <outlet property="AnswerButton3" destination="gzi-iY-unT" id="SSB-sg-ur1"/>
+                        <outlet property="AnswerButton4" destination="IFH-Rn-sw6" id="mqX-oy-j7o"/>
                         <outlet property="ProgressView" destination="zDz-Vo-FdO" id="RxW-i2-BIg"/>
+                        <outlet property="answerButton1" destination="PIk-kT-jQ8" id="XWh-QF-ZF1"/>
+                        <outlet property="answerButton2" destination="6Ss-by-XFk" id="LAC-Kv-h6P"/>
                         <outlet property="progressLabel" destination="COV-e5-ZLG" id="HrI-3m-8FE"/>
                     </connections>
                 </viewController>

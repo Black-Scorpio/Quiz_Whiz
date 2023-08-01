@@ -12,15 +12,23 @@ class EasyQuizViewController: UIViewController {
     //setting up the timer
     var timer = Timer()
     var progress: Float = 1.0
+    
+    //importing testDifficulty and strings from the previous views
+    var categoryDecided: String!
+    var difficultyDecided: String!
+    
+    //setting up a global quiz app
+    var quiz: Quiz
 
     //outlets
     @IBOutlet weak var ProgressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
     
-    //importing testDifficulty and strings from the previous views    
-    var categoryDecided: String!
-    var difficultyDecided: String!
-    
+    //connecting button labels
+    @IBOutlet weak var answerButton1: UIButton!
+    @IBOutlet weak var answerButton2: UIButton!
+    @IBOutlet weak var AnswerButton3: UIButton!
+    @IBOutlet weak var AnswerButton4: UIButton!
     
     func runProgressBar()
     {
@@ -56,7 +64,23 @@ class EasyQuizViewController: UIViewController {
         //testDifficulty.text = difficultyDecided
         
         // Do any additional setup after loading the view.
+        quiz = Quiz(inputCategory: "Animals")
+        initialQuestion();
+    
     }
+    
+    func initialQuestion()
+    {
+        answerButton1.setTitle(<#T##title: String?##String?#>, for: <#T##UIControl.State#>) = quiz.answers[1][1]
+        
+    }
+    
+    
+    
+    
+    
+    
+    
     @IBAction func button1Pressed(_ sender: Any) {
         progress = 1.0
     }
