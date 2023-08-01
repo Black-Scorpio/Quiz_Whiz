@@ -21,7 +21,7 @@ class UserViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+
     @IBAction func chooseTapped(_ sender: Any) {
         // Check if user name is not empty
             if user.name.isEmpty {
