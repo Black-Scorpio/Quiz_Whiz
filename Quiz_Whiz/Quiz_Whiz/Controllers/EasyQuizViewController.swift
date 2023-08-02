@@ -16,6 +16,7 @@ class EasyQuizViewController: UIViewController {
     //importing testDifficulty and strings from the previous views
     var categoryDecided: String!
     var difficultyDecided: String!
+    var user:User!
     
     //this variable will hold which question the user is on
     var currentQuestion: Int?

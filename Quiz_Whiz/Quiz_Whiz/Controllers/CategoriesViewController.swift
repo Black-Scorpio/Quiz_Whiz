@@ -22,7 +22,9 @@ class CategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //display user name
         userNameLabel.text = "Player: \(user.name)"
+        //hides the 'back' navigation item
         self.navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }
