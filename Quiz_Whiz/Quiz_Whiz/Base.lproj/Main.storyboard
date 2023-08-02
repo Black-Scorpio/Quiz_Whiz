@@ -421,6 +421,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="button2Pressed:" destination="Db3-sr-Xvd" eventType="touchUpInside" id="fK8-SU-61L"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzi-iY-unT">
                                                 <rect key="frame" x="24" y="572" width="345" height="75"/>
@@ -431,6 +434,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="button3Pressed:" destination="Db3-sr-Xvd" eventType="touchUpInside" id="bhm-19-X9r"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFH-Rn-sw6">
                                                 <rect key="frame" x="24" y="655" width="345" height="75"/>
@@ -441,6 +447,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="button4Pressed:" destination="Db3-sr-Xvd" eventType="touchUpInside" id="bJO-Kw-Jdo"/>
+                                                </connections>
                                             </button>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zDz-Vo-FdO">
                                                 <rect key="frame" x="24" y="384" width="345" height="4"/>

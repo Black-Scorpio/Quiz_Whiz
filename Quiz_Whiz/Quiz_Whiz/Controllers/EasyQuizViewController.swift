@@ -56,10 +56,10 @@ class EasyQuizViewController: UIViewController {
         ProgressView.progress = progress
         
         //timer object which calls roughly every 1 second
-        timer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true, block: {(timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: {(timer) in
             
             //decrementing timer by 10%
-            self.progress -= 0.05
+            self.progress -= 0.0125
             self.ProgressView.progress = self.progress
             
             
@@ -97,6 +97,21 @@ class EasyQuizViewController: UIViewController {
     
     //when buttons are pressed it will move to the next question and check score
     @IBAction func button1Pressed(_ sender: Any) {
+        moveToNext();
+        //checkIfCorrect();
+    }
+    
+    @IBAction func button2Pressed(_ sender: Any) {
+        moveToNext();
+        //checkIfCorrect();
+    }
+    
+    @IBAction func button3Pressed(_ sender: Any) {
+        moveToNext();
+        //checkIfCorrect();
+    }
+    
+    @IBAction func button4Pressed(_ sender: Any) {
         moveToNext();
         //checkIfCorrect();
     }
