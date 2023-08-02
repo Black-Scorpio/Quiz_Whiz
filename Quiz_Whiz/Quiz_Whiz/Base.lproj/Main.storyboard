@@ -319,7 +319,7 @@
         <!--Final View Controller-->
         <scene sceneID="ZFI-ff-tmp">
             <objects>
-                <viewController storyboardIdentifier="FinalVC" id="kix-Je-0t1" customClass="FinalViewController" customModule="Quiz_Whiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FinalViewController" id="kix-Je-0t1" customClass="FinalViewController" customModule="Quiz_Whiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Gn-qS-2s9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -401,7 +401,7 @@
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="button1Pressed:" destination="Db3-sr-Xvd" eventType="touchUpInside" id="n3I-T1-xUM"/>
+                                                    <action selector="button1Pressed:" destination="Db3-sr-Xvd" eventType="touchUpInside" id="ps3-d7-cQ5"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ss-by-XFk">
