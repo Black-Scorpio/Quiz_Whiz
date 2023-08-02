@@ -12,7 +12,8 @@ class Quiz
     var category: String
     var questions: [String]
 
-    init() {
-        this.questions = ["Test1Question", "Test"]
+    init(category:String) {
+        self.category = category
+        self.questions = [String]()
     }
 }
