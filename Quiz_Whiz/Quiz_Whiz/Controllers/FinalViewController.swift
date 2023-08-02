@@ -25,6 +25,8 @@ class FinalViewController: UIViewController {
                 finalScoreImage.image = UIImage(named: "sad_dog")
             }
         }
+        //temp just to check if the scoring was working
+        scoreLabel.text = String(user.score)
        
         // Do any additional setup after loading the view.
     }

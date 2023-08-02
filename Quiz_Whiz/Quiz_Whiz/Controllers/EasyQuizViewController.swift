@@ -24,7 +24,7 @@ class EasyQuizViewController: UIViewController {
     //setting up a global quiz app
     var quiz = Quiz()
 
-    //outlets
+    //Creating Outlets
     @IBOutlet weak var ProgressView: UIProgressView!
     @IBOutlet weak var progressLabel: UILabel!
     
@@ -34,17 +34,18 @@ class EasyQuizViewController: UIViewController {
     @IBOutlet weak var answerButton3: UIButton!
     @IBOutlet weak var answerButton4: UIButton!
     
+    //Question Prompt label and Image outlets
+    @IBOutlet weak var questionPromptLabel: UILabel!
     
+    
+    //This function is called on view load
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //setting the current question to 0 which is the first question
+        user.score = 0
         currentQuestion = 0
         runProgressBar()
-        //testCategory.text = categoryDecided
-        //testDifficulty.text = difficultyDecided
-        
-        // Do any additional setup after loading the view.
         switchQuestion()
     
     }
@@ -79,6 +80,7 @@ class EasyQuizViewController: UIViewController {
     {
         if(categoryDecided == "Animals")
         {
+            questionPromptLabel.text = quiz.animalQuestions[currentQuestion!]
             answerButton1.setTitle(quiz.animalAnswers[currentQuestion!][0], for: .normal);
             answerButton2.setTitle(quiz.animalAnswers[currentQuestion!][1], for: .normal);
             answerButton3.setTitle(quiz.animalAnswers[currentQuestion!][2], for: .normal);
@@ -86,40 +88,51 @@ class EasyQuizViewController: UIViewController {
         }
         else if(categoryDecided == "Programming")
         {
-            answerButton1.setTitle(quiz.codeAnswers[currentQuestion!][0], for: .normal);
-            answerButton2.setTitle(quiz.codeAnswers[currentQuestion!][1], for: .normal);
-            answerButton3.setTitle(quiz.codeAnswers[currentQuestion!][2], for: .normal);
-            answerButton4.setTitle(quiz.codeAnswers[currentQuestion!][3], for: .normal);
+            //answerButton1.setTitle(quiz.codeAnswers[currentQuestion!][0], for: .normal);
+            //answerButton2.setTitle(quiz.codeAnswers[currentQuestion!][1], for: .normal);
+            //answerButton3.setTitle(quiz.codeAnswers[currentQuestion!][2], for: .normal);
+            //answerButton4.setTitle(quiz.codeAnswers[currentQuestion!][3], for: .normal);
         }
             
             
     }
     
+    func checkIfCorrect(_ buttonInput: Int)
+    {
+        if(categoryDecided == "Animals")
+        {
+            if(buttonInput == quiz.animalCorrectAnswer[currentQuestion!])
+            {
+                user.score += 1;
+            }
+        }
+    }
+    
     
     //when buttons are pressed it will move to the next question and check score
     @IBAction func button1Pressed(_ sender: Any) {
+        checkIfCorrect(1);
         moveToNext();
-        //checkIfCorrect();
     }
     
     @IBAction func button2Pressed(_ sender: Any) {
+        checkIfCorrect(2);
         moveToNext();
-        //checkIfCorrect();
     }
     
     @IBAction func button3Pressed(_ sender: Any) {
+        checkIfCorrect(3);
         moveToNext();
-        //checkIfCorrect();
     }
     
     @IBAction func button4Pressed(_ sender: Any) {
+        checkIfCorrect(4);
         moveToNext();
-        //checkIfCorrect();
     }
     
     //move to next function will reset the timer and update the buttons/UI
     func moveToNext(){
-        if(currentQuestion! < 1)
+        if(currentQuestion! < 9)
         {
             progress = 1.0
             currentQuestion! += 1
@@ -129,9 +142,9 @@ class EasyQuizViewController: UIViewController {
         {
             //to navigate to next final score screen
             let finalScoreVC:FinalViewController = self.storyboard?.instantiateViewController(withIdentifier: "FinalViewController") as! FinalViewController
-            //.category = categorySelected
-            //This passes the user to the difficulties view
-            //difficultiesVC.user = user
+            //finalScoreVC.category = categoryDecided
+            //finalScoreVC.difficultyDecided = difficultySelected
+            finalScoreVC.user = user
             self.navigationController?.pushViewController(finalScoreVC, animated: true)
         }
     }
