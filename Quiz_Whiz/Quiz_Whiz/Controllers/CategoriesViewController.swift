@@ -8,6 +8,9 @@
 import UIKit
 
 class CategoriesViewController: UIViewController {
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    
     //User variable that will get passed through entire application
     var user:User!
     
@@ -15,10 +18,12 @@ class CategoriesViewController: UIViewController {
     var categorySelected: String!
     
     //creating the categories
-    let categories = Category(categoryOne: "Animals", categoryTwo: "Music", categoryThree: "Sport", categoryFour: "Random Facts")
+    let categories = Category(categoryOne: "Animals", categoryTwo: "Music", categoryThree: "Programming", categoryFour: "Random Facts")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userNameLabel.text = "Player: \(user.name)"
+        self.navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }
     
@@ -30,7 +35,7 @@ class CategoriesViewController: UIViewController {
         else if sender.tag == 2{ //'music' button
             categorySelected = categories.categoryTwo
         }
-        else if sender.tag == 3{ //'sport' button
+        else if sender.tag == 3{ //'programming' button
             categorySelected = categories.categoryThree
         }
         else if sender.tag == 4{ //'random facts' button
@@ -40,6 +45,8 @@ class CategoriesViewController: UIViewController {
         //to navigate to next difficulties screen 
         let difficultiesVC:DifficultiesViewController = self.storyboard?.instantiateViewController(withIdentifier: "DifficultiesViewController") as! DifficultiesViewController
         difficultiesVC.category = categorySelected
+        //This passes the user to the difficulties view
+        difficultiesVC.user = user
         self.navigationController?.pushViewController(difficultiesVC, animated: true)
     }
     

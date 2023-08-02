@@ -14,6 +14,7 @@ class DifficultiesViewController: UIViewController {
 //    @IBOutlet weak var hardButton: UIButton!
 //    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
     
     //variables passed on
     var user:User!
@@ -25,7 +26,7 @@ class DifficultiesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        userLabel.text = "Player: \(user.name)"
         //removes the 'back' navigation item
         self.navigationItem.hidesBackButton = true
         //showing category selected from previous screen
