@@ -18,7 +18,7 @@ class EasyQuizViewController: UIViewController {
     var difficultyDecided: String!
     
     //setting up a global quiz app
-    var quiz: Quiz
+    //var quiz: Quiz
 
     //outlets
     @IBOutlet weak var ProgressView: UIProgressView!
@@ -29,6 +29,19 @@ class EasyQuizViewController: UIViewController {
     @IBOutlet weak var answerButton2: UIButton!
     @IBOutlet weak var AnswerButton3: UIButton!
     @IBOutlet weak var AnswerButton4: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        runProgressBar()
+        //testCategory.text = categoryDecided
+        //testDifficulty.text = difficultyDecided
+        
+        // Do any additional setup after loading the view.
+        //quiz = Quiz(inputCategory: "Animals")
+        initialQuestion();
+    
+    }
     
     func runProgressBar()
     {
@@ -54,24 +67,11 @@ class EasyQuizViewController: UIViewController {
             })
     }
     
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        runProgressBar()
-        //testCategory.text = categoryDecided
-        //testDifficulty.text = difficultyDecided
-        
-        // Do any additional setup after loading the view.
-        quiz = Quiz(inputCategory: "Animals")
-        initialQuestion();
-    
-    }
+
     
     func initialQuestion()
     {
-        answerButton1.setTitle(<#T##title: String?##String?#>, for: <#T##UIControl.State#>) = quiz.answers[1][1]
+        //answerButton1.setTitle(<#T##title: String?##String?#>, for: <#T##UIControl.State#>) = quiz.answers[1][1]
         
     }
     
