@@ -9,13 +9,14 @@ import Foundation
 
 class Quiz
 {
-    var category: String
     var questions: [String]
-    var answers: [[String]]
+    var animalAnswers: [[String]]
+    var codeAnswers: [[String]]
 
-    init( inputCategory: String) {
+    init() {
         self.questions = ["Test1Question", "TestQuestion 2"]
-        self.answers = [["Test Answer1", "Test Answer2", "Test Answer3", "Test Answer4"], ["Test Answer 5", "Test Answer6", "Test Answer7", "Test Answer8"]]
-        self.category = inputCategory
+        self.animalAnswers = [["AnimalAnswer1", "AnimalAnswer2", "AnimalAnswer3", "AnimalAnswer4"], ["AnimalAnswer 5", "AnimalAnswer6", "AnimalAnswer7", "AnimalAnswer8"]]
+        self.codeAnswers = [["CodeAnswer1", "CodeAnswer2", "CodeAnswer3", "CodeAnswer4"], ["CodeAnswer 5", "CodeAnswer6", "CodeAnswer7", "CodeAnswer8"]]
+
     }
 }

@@ -17,8 +17,11 @@ class EasyQuizViewController: UIViewController {
     var categoryDecided: String!
     var difficultyDecided: String!
     
+    //this variable will hold which question the user is on
+    var currentQuestion: Int?
+    
     //setting up a global quiz app
-    //var quiz: Quiz
+    var quiz = Quiz()
 
     //outlets
     @IBOutlet weak var ProgressView: UIProgressView!
@@ -27,19 +30,21 @@ class EasyQuizViewController: UIViewController {
     //connecting button labels
     @IBOutlet weak var answerButton1: UIButton!
     @IBOutlet weak var answerButton2: UIButton!
-    @IBOutlet weak var AnswerButton3: UIButton!
-    @IBOutlet weak var AnswerButton4: UIButton!
+    @IBOutlet weak var answerButton3: UIButton!
+    @IBOutlet weak var answerButton4: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //setting the current question to 0 which is the first question
+        currentQuestion = 0
         runProgressBar()
         //testCategory.text = categoryDecided
         //testDifficulty.text = difficultyDecided
         
         // Do any additional setup after loading the view.
-        //quiz = Quiz(inputCategory: "Animals")
-        initialQuestion();
+        switchQuestion(currentQuestion!)
     
     }
     
@@ -69,10 +74,24 @@ class EasyQuizViewController: UIViewController {
     
 
     
-    func initialQuestion()
+    func switchQuestion(_ questionNum: Int)
     {
-        //answerButton1.setTitle(<#T##title: String?##String?#>, for: <#T##UIControl.State#>) = quiz.answers[1][1]
-        
+        if(categoryDecided == "Animals")
+        {
+            answerButton1.setTitle(quiz.animalAnswers[questionNum][0], for: .normal);
+            answerButton2.setTitle(quiz.animalAnswers[questionNum][1], for: .normal);
+            answerButton3.setTitle(quiz.animalAnswers[questionNum][2], for: .normal);
+            answerButton4.setTitle(quiz.animalAnswers[questionNum][3], for: .normal);
+        }
+        else if(categoryDecided == "Programming")
+        {
+            answerButton1.setTitle(quiz.codeAnswers[questionNum][0], for: .normal);
+            answerButton2.setTitle(quiz.codeAnswers[questionNum][1], for: .normal);
+            answerButton3.setTitle(quiz.codeAnswers[questionNum][2], for: .normal);
+            answerButton4.setTitle(quiz.codeAnswers[questionNum][3], for: .normal);
+        }
+            
+            
     }
     
     

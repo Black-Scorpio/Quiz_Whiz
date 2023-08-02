@@ -463,11 +463,11 @@
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                     <connections>
-                        <outlet property="AnswerButton3" destination="gzi-iY-unT" id="SSB-sg-ur1"/>
-                        <outlet property="AnswerButton4" destination="IFH-Rn-sw6" id="mqX-oy-j7o"/>
                         <outlet property="ProgressView" destination="zDz-Vo-FdO" id="RxW-i2-BIg"/>
                         <outlet property="answerButton1" destination="PIk-kT-jQ8" id="XWh-QF-ZF1"/>
                         <outlet property="answerButton2" destination="6Ss-by-XFk" id="LAC-Kv-h6P"/>
+                        <outlet property="answerButton3" destination="gzi-iY-unT" id="CEg-6Z-YQU"/>
+                        <outlet property="answerButton4" destination="IFH-Rn-sw6" id="kNA-Ub-zr0"/>
                         <outlet property="progressLabel" destination="COV-e5-ZLG" id="HrI-3m-8FE"/>
                     </connections>
                 </viewController>
