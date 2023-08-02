@@ -392,13 +392,6 @@
                                         <rect key="frame" x="0.0" y="1" width="393" height="792"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Prompt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgt-Z1-xnl">
-                                                <rect key="frame" x="132" y="270" width="129" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PIk-kT-jQ8">
                                                 <rect key="frame" x="24" y="406" width="345" height="75"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -421,6 +414,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="button2Pressed:" destination="Db3-sr-Xvd" eventType="touchUpInside" id="fK8-SU-61L"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzi-iY-unT">
                                                 <rect key="frame" x="24" y="572" width="345" height="75"/>
@@ -431,6 +427,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="button3Pressed:" destination="Db3-sr-Xvd" eventType="touchUpInside" id="bhm-19-X9r"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFH-Rn-sw6">
                                                 <rect key="frame" x="24" y="655" width="345" height="75"/>
@@ -441,6 +440,9 @@
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
                                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="button4Pressed:" destination="Db3-sr-Xvd" eventType="touchUpInside" id="bJO-Kw-Jdo"/>
+                                                </connections>
                                             </button>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zDz-Vo-FdO">
                                                 <rect key="frame" x="24" y="384" width="345" height="4"/>
@@ -460,6 +462,13 @@
                                                 <rect key="frame" x="24" y="43" width="345" height="211"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question Prompt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgt-Z1-xnl">
+                                                <rect key="frame" x="24" y="262" width="345" height="85"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
@@ -477,6 +486,7 @@
                         <outlet property="answerButton3" destination="gzi-iY-unT" id="CEg-6Z-YQU"/>
                         <outlet property="answerButton4" destination="IFH-Rn-sw6" id="kNA-Ub-zr0"/>
                         <outlet property="progressLabel" destination="COV-e5-ZLG" id="HrI-3m-8FE"/>
+                        <outlet property="questionPromptLabel" destination="rgt-Z1-xnl" id="XV7-Kd-6sG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cel-gV-CSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
