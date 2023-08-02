@@ -18,7 +18,6 @@ class UserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
@@ -38,8 +37,13 @@ class UserViewController: UIViewController {
     @IBAction func saveUsername(_ sender: UIButton) {
         // Check if userNameText has a value
         if !userNameText.text!.isEmpty {
-            user.name = userNameText.text!
-            userNameLabel.text = "Username: \(userNameText.text!)"
+            // Check if the length of the username is within the limit
+            if userNameText.text!.count <= 10 {
+                user.name = userNameText.text!
+                userNameLabel.text = "Username: \(user.name)"
+            } else {
+                showAlert(withTitle: "Invalid Name Length", message: "Username must be up to 10 characters long.")
+            }
         } else {
             showAlert(withTitle: "Empty Name", message: "Please enter a valid username.")
         }

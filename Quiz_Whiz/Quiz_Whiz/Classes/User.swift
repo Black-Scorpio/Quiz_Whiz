@@ -10,8 +10,9 @@ import UIKit
 
 struct User {
     private var _name: String
+    private var score: Int
      
-     var name: String {
+    var name: String {
          get {
              return _name
          }
@@ -26,11 +27,13 @@ struct User {
      }
      
      init(name: String) {
-         _name = name
+         self._name = name
+         self.score = 0
      }
-    //Initiating the User with an empty name
+    //Initiating the User with an empty name and 0 score
     init(){
         _name = ""
+        score = 0
     }
     
 }

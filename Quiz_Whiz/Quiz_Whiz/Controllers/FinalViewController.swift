@@ -13,6 +13,8 @@ class FinalViewController: UIViewController {
     
     @IBOutlet weak var finalScoreImage: UIImageView!
     
+    var user:User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Display different image based on the user's score that was passed to the scoreLabel
@@ -37,5 +39,13 @@ class FinalViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    // navigate back to the home page
+    @IBAction func homeTapped(_ sender: UIButton) {
+        let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "DifficultiesViewController") as! HomeViewController
+        self.navigationController?.pushViewController(homeVC, animated: true)
+    }
+    
+    
+    
 }
