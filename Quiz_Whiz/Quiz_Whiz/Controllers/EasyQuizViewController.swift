@@ -75,7 +75,9 @@ class EasyQuizViewController: UIViewController {
             
             if( self.ProgressView.progress <= 0.0)
             {
-                self.progressLabel.text = "done"
+                self.questionFeedbackButton.backgroundColor = UIColor.systemRed
+                self.moveToNext();
+                
             }
             })
     }
@@ -122,6 +124,7 @@ class EasyQuizViewController: UIViewController {
             
     }
     
+    //This function will check if the button clicked matches the correct answer if it does it will increase the user score and display feedback
     func checkIfCorrect(_ buttonInput: Int)
     {
         if(categoryDecided == "Animals")
@@ -199,7 +202,7 @@ class EasyQuizViewController: UIViewController {
     
     //move to next function will reset the timer and update the buttons/UI
     func moveToNext(){
-        if(currentQuestion! < 9)
+        if(currentQuestion! < 4)//4 for easy 6 for medium 9 for hard
         {
             progressLabel.text = "20s Remaining"
             progress = 1.0
@@ -213,6 +216,7 @@ class EasyQuizViewController: UIViewController {
             //finalScoreVC.category = categoryDecided
             //finalScoreVC.difficultyDecided = difficultySelected
             finalScoreVC.user = user
+            finalScoreVC.questionCount = 5
             self.navigationController?.pushViewController(finalScoreVC, animated: true)
         }
     }
