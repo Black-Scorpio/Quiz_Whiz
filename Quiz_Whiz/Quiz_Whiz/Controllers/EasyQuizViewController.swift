@@ -51,6 +51,7 @@ class EasyQuizViewController: UIViewController {
         switchQuestion()
         
         questionFeedbackButton.backgroundColor = UIColor.white
+        self.navigationItem.hidesBackButton = true
     
     }
     

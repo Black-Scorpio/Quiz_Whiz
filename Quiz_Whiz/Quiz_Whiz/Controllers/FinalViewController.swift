@@ -15,12 +15,17 @@ class FinalViewController: UIViewController {
     
     var user:User!
     
+    var questionCount:Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
+        let count = questionCount ?? 10
+        scoreLabel.text = "\(String(user.score))/\(count)!"
             if user.score > 5 {
                 finalScoreImage.image = UIImage(named: "happy")
             } else {
-                finalScoreImage.image = UIImage(named: "sad_dog")
+                finalScoreImage.image = UIImage(named: "sad")
             }
     }
     
@@ -37,8 +42,17 @@ class FinalViewController: UIViewController {
     
     // navigate back to the home page
     @IBAction func homeTapped(_ sender: UIButton) {
-        let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "DifficultiesViewController") as! HomeViewController
+        let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
         self.navigationController?.pushViewController(homeVC, animated: true)
+    }
+    
+    
+    @IBAction func playAgainTapped(_ sender: UIButton) {
+        let categoryVC = self.storyboard?.instantiateViewController(withIdentifier: "CategoryVC") as! CategoriesViewController
+        // Navigating to UserViewController
+        user.score = 0
+        categoryVC.user = user
+        self.navigationController?.pushViewController(categoryVC, animated: true)
     }
     
     
