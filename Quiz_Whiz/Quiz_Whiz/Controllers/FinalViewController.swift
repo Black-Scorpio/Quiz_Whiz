@@ -13,6 +13,8 @@ class FinalViewController: UIViewController {
     
     @IBOutlet weak var finalScoreImage: UIImageView!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
     var user:User!
     
     var questionCount:Int!
@@ -20,9 +22,10 @@ class FinalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
+        nameLabel.text = "Player: \(user.name)"
         let count = questionCount ?? 10
         scoreLabel.text = "\(String(user.score))/\(count)!"
-            if user.score > 5 {
+        if (Double(user.score) / Double(count)) > 0.5  {
                 finalScoreImage.image = UIImage(named: "happy")
             } else {
                 finalScoreImage.image = UIImage(named: "sad")
