@@ -63,7 +63,7 @@ class EasyQuizViewController: UIViewController {
         ProgressView.progress = progress
         
         //timer object which calls roughly every 1 second
-        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: {(timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true, block: {(timer) in
             
             //decrementing timer by 10%
             self.progress -= 0.0125
@@ -75,10 +75,15 @@ class EasyQuizViewController: UIViewController {
             
             if( self.ProgressView.progress <= 0.0)
             {
-                self.questionFeedbackButton.backgroundColor = UIColor.systemRed
-                self.moveToNext();
+                if(self.currentQuestion! <= 5)
+                {
+                    
+                    self.questionFeedbackButton.backgroundColor = UIColor.systemRed
+                    self.moveToNext();
+                }
                 
             }
+
             })
     }
     
@@ -211,6 +216,8 @@ class EasyQuizViewController: UIViewController {
         }
         else
         {
+            
+            timer.invalidate()
             //to navigate to next final score screen
             let finalScoreVC:FinalViewController = self.storyboard?.instantiateViewController(withIdentifier: "FinalViewController") as! FinalViewController
             //finalScoreVC.category = categoryDecided
