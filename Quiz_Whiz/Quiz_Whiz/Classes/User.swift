@@ -10,7 +10,7 @@ import UIKit
 
 struct User {
     private var _name: String
-    private var score: Int
+    var score: Int
      
     var name: String {
          get {
@@ -25,6 +25,7 @@ struct User {
              _name = newValue
          }
      }
+    
      
      init(name: String) {
          self._name = name
