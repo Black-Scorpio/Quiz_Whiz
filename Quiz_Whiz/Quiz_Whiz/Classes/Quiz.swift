@@ -79,29 +79,30 @@ class Quiz
         //Initializing the Questions and Answers for the programming category
         self.programmingQuestions = [
             "What popular operating system, launched in 1991, also has its own mascot, Tux the penguin?",
-            "Which member of the Avengers had a brief stint as a pop star?",
-            "Before Miley Cyrus recorded 'Wrecking Ball,' it was offered to which singer?",
-            "Eminem's 8 Mile is named after a road in which city?",
-            "Which classical composer was deaf?",
-            "How many coaches (full and part-time) from The Voice have won Grammys?",
-            "Who sang the Spongebob Squarepants theme song for the movie?",
-            "The Wu-Tang Clan recommends protecting which body part?",
-            "Which Marvel movie's soundtrack won two Grammys?",
-            "What singer holds the world record for most words in a hit single?"
+            "Which Swift data type is used to store whole numbers without decimals?",
+            "What is the Swift operator used to perform optional binding safely?",
+            "What is the correct way to declare a variable in Python?",
+            "How do you check the number of items in a list in Python?",
+            "Which keyword is used to create a thread in Java?",
+            "What is the output of the following code snippet?",
+            "Which programming language is used for developing Android apps?",
+            "Which of the following is a type of sorting algorithm?",
+            "Which of the following is not a relational operator in most programming languages?"
           ];
+
         self.programmingAnswers = [
-            ["Android", "Windows", "Linux", "MacOS"],
-            ["Brie Larson", "Chris Hemsworth", "Scarlett Johansson", "Chris Pratt"],
-            ["Ariana Grande", "Beyonce", "Lady Gaga", "Rihanna"],
-            ["New York", "Chicago", "Detroit", "Portland"],
-            ["Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Richard Wagner"],
-            ["5", "12", "10", "14"],
-            ["Avril Lavigne", "Britney Spears", "P!nk", "Rufus Wainwright"],
-            ["Neck", "Arm", "Foot", "Ear"],
-            ["Avengers: Endgame", "Black Panther", "Spider-Man: Homecoming", "Captain America: The First Avenger"],
-            ["Busta Rhymes", "Eminem", "50 Cent", "Kanye West"]
+            ["Andriod", "Window", "Linux", "MacOS"],
+            ["Bool", "String", "Double", "Int"],
+            ["&&", "if let", "??", "=="],
+            ["var variable_name = value", "variable_name = value", "let variable_name = value", "variableName(value)"],
+            ["len(list)", "list.size()", "list.count()", "list.length()"],
+            ["process", "execute", "create", "New"],
+            ["9", "8", "7", "10"],
+            ["Python", "C#", "Java", "Swift"],
+            ["Binary search", "Depth-first search", "Breadth-first search", "Quick sort"],
+            ["=", "==", "++", "!="]
           ];
-        self.programmingCorrectAnswer = [3,1,2,3,3,2,1,1,2,2]
+        self.programmingCorrectAnswer = [3,4,2,2,1,4,1,3,4,3]
         
         //Initializing the Questions and Answers for the random facts category
         self.randomQuestions = [
