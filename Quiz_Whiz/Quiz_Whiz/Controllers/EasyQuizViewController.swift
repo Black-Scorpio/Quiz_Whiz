@@ -121,6 +121,7 @@ class EasyQuizViewController: UIViewController {
             
     }
     
+    //This function will check if the button clicked matches the correct answer if it does it will increase the user score and display feedback
     func checkIfCorrect(_ buttonInput: Int)
     {
         if(categoryDecided == "Animals")
