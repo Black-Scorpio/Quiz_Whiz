@@ -19,6 +19,7 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         testCategory.text = categoryDecided
         testDifficulty.text = difficultyDecided
+        self.navigationItem.hidesBackButton = true
         // Do any additional setup after loading the view.
     }
     
