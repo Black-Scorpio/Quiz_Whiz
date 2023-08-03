@@ -36,6 +36,8 @@ class EasyQuizViewController: UIViewController {
     
     //Question Prompt label and Image outlets
     @IBOutlet weak var questionPromptLabel: UILabel!
+    @IBOutlet weak var questionFeedbackButton: UIButton!
+    
     
     
     //This function is called on view load
@@ -47,6 +49,8 @@ class EasyQuizViewController: UIViewController {
         currentQuestion = 0
         runProgressBar()
         switchQuestion()
+        
+        questionFeedbackButton.backgroundColor = UIColor.white
     
     }
     
@@ -63,6 +67,7 @@ class EasyQuizViewController: UIViewController {
             //decrementing timer by 10%
             self.progress -= 0.0125
             self.ProgressView.progress = self.progress
+            self.questionFeedbackButton.backgroundColor = UIColor.white
             
             
             self.progressLabel.text =  String(Int(self.progress * 20)) + "s Left"
@@ -81,10 +86,10 @@ class EasyQuizViewController: UIViewController {
         if(categoryDecided == "Animals")
         {
             questionPromptLabel.text = quiz.animalQuestions[currentQuestion!]
-            answerButton1.setTitle(quiz.animalAnswers[currentQuestion!][0], for: .normal);
-            answerButton2.setTitle(quiz.animalAnswers[currentQuestion!][1], for: .normal);
-            answerButton3.setTitle(quiz.animalAnswers[currentQuestion!][2], for: .normal);
-            answerButton4.setTitle(quiz.animalAnswers[currentQuestion!][3], for: .normal);
+            answerButton1.setTitle(quiz.animalAnswers[currentQuestion!][0], for: .normal)
+            answerButton2.setTitle(quiz.animalAnswers[currentQuestion!][1], for: .normal)
+            answerButton3.setTitle(quiz.animalAnswers[currentQuestion!][2], for: .normal)
+            answerButton4.setTitle(quiz.animalAnswers[currentQuestion!][3], for: .normal)
         }
         else if(categoryDecided == "Music")
         {
@@ -111,7 +116,7 @@ class EasyQuizViewController: UIViewController {
             answerButton3.setTitle(quiz.randomAnswers[currentQuestion!][2], for: .normal);
             answerButton4.setTitle(quiz.randomAnswers[currentQuestion!][3], for: .normal);
         }
-
+        
             
             
     }
@@ -123,6 +128,11 @@ class EasyQuizViewController: UIViewController {
             if(buttonInput == quiz.animalCorrectAnswer[currentQuestion!])
             {
                 user.score += 1;
+                questionFeedbackButton.backgroundColor = UIColor.systemGreen
+            }
+            else
+            {
+                questionFeedbackButton.backgroundColor = UIColor.systemRed
             }
         }
         else if(categoryDecided == "Music")
@@ -130,6 +140,11 @@ class EasyQuizViewController: UIViewController {
             if(buttonInput == quiz.musicCorrectAnswer[currentQuestion!])
             {
                 user.score += 1;
+                questionFeedbackButton.backgroundColor = UIColor.systemGreen
+            }
+            else
+            {
+                questionFeedbackButton.backgroundColor = UIColor.systemRed
             }
         }
         else if(categoryDecided == "Programming")
@@ -137,12 +152,24 @@ class EasyQuizViewController: UIViewController {
             if(buttonInput == quiz.programmingCorrectAnswer[currentQuestion!])
             {
                 user.score += 1;
+                questionFeedbackButton.backgroundColor = UIColor.systemGreen
             }
-        }else if(categoryDecided == "Random Facts")
+            else
+            {
+                questionFeedbackButton.backgroundColor = UIColor.systemRed
+            }
+            
+        }
+        else if(categoryDecided == "Random Facts")
         {
             if(buttonInput == quiz.randomCorrectAnswer[currentQuestion!])
             {
                 user.score += 1;
+                questionFeedbackButton.backgroundColor = UIColor.systemGreen
+            }
+            else
+            {
+                questionFeedbackButton.backgroundColor = UIColor.systemRed
             }
         }
     }
@@ -173,6 +200,7 @@ class EasyQuizViewController: UIViewController {
     func moveToNext(){
         if(currentQuestion! < 9)
         {
+            progressLabel.text = "20s Remaining"
             progress = 1.0
             currentQuestion! += 1
             switchQuestion()
