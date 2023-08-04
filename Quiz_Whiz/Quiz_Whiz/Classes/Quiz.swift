@@ -9,7 +9,6 @@ import Foundation
 
 class Quiz
 {
-    //creating my instance variables
     var animalQuestions: [String]
     var animalAnswers: [[String]]
     var animalCorrectAnswer: [Int]
