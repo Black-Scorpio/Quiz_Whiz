@@ -1,5 +1,5 @@
 //
-//  EasyQuizViewController.swift
+//  HardQuizViewController.swift
 //  Quiz Whiz(KD)
 //
 //  Created by Kevyn Downer on 2023-07-24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EasyQuizViewController: UIViewController {
+class HardQuizViewController: UIViewController {
     
     //setting up the timer
     var timer = Timer()
@@ -62,7 +62,7 @@ class EasyQuizViewController: UIViewController {
         ProgressView.progress = progress
         
         //timer object which calls roughly every 1 second
-        timer = Timer.scheduledTimer(withTimeInterval: 0.27, repeats: true, block: {(timer) in
+        timer = Timer.scheduledTimer(withTimeInterval: 0.0945, repeats: true, block: {(timer) in
             
             //decrementing timer by 10%
             self.progress -= 0.0125
@@ -70,11 +70,11 @@ class EasyQuizViewController: UIViewController {
             self.questionFeedbackButton.backgroundColor = UIColor.white
             
             
-            self.progressLabel.text =  String(Int(self.progress * 20)) + "s Left"
+            self.progressLabel.text =  String(Int(self.progress * 7)) + "s Left"
             
             if( self.ProgressView.progress <= 0.0)
             {
-                if(self.currentQuestion! <= 5)
+                if(self.currentQuestion! <= 10)
                 {
                     
                     self.questionFeedbackButton.backgroundColor = UIColor.systemRed
@@ -210,9 +210,9 @@ class EasyQuizViewController: UIViewController {
     
     //move to next function will reset the timer and update the buttons/UI
     func moveToNext(){
-        if(currentQuestion! < 4)//4 for easy 6 for medium 9 for hard
+        if(currentQuestion! < 9)//4 for easy 6 for medium 9 for hard
         {
-            progressLabel.text = "20s Remaining"
+            progressLabel.text = "7s Remaining"
             progress = 1.0
             currentQuestion! += 1
             switchQuestion()
@@ -226,7 +226,7 @@ class EasyQuizViewController: UIViewController {
             //finalScoreVC.category = categoryDecided
             //finalScoreVC.difficultyDecided = difficultySelected
             finalScoreVC.user = user
-            finalScoreVC.questionCount = 5
+            finalScoreVC.questionCount = 10
             self.navigationController?.pushViewController(finalScoreVC, animated: true)
         }
     }

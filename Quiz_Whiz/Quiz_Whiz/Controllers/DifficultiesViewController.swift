@@ -45,11 +45,11 @@ class DifficultiesViewController: UIViewController {
         }
         else if sender.tag == 6{ //'medium' button
             difficultySelected = difficulties.levelTwo
-//            toMediumLevel()
+            toMediumLevel()
         }
         else if sender.tag == 7{ //'hard' button
             difficultySelected = difficulties.levelThree
-//            toHardLevel()
+            toHardLevel()
         }
     }
     
@@ -63,23 +63,23 @@ class DifficultiesViewController: UIViewController {
         self.navigationController?.pushViewController(easyQuizVC, animated: true)
     }
     
-//    func toMediumLevel(){
-//        //to navigate to next screen - medium quiz
-//        let mediumQuizVC:MediumQuizViewController = self.storyboard?.instantiateViewController(withIdentifier: "MediumQuizViewController") as! MediumQuizViewController
-//        mediumQuizVC.categoryDecided = category
-//        mediumQuizVC.difficultyDecided = difficultySelected
-//        mediumQuizVC.user = user
-//        self.navigationController?.pushViewController(mediumQuizVC, animated: true)
-//    }
+    func toMediumLevel(){
+        //to navigate to next screen - medium quiz
+        let mediumQuizVC:MediumQuizViewController = self.storyboard?.instantiateViewController(withIdentifier: "MediumQuizViewController") as! MediumQuizViewController
+        mediumQuizVC.categoryDecided = category
+        mediumQuizVC.difficultyDecided = difficultySelected
+        mediumQuizVC.user = user
+        self.navigationController?.pushViewController(mediumQuizVC, animated: true)
+    }
     
-//    func toHardLevel(){
-//        //to navigate to next screen - hard quiz
-//        let hardQuizVC:HardQuizViewController = self.storyboard?.instantiateViewController(withIdentifier: "HardQuizViewController") as! HardQuizViewController
-//        hardQuizVC.categoryDecided = category
-//        hardQuizVC.difficultyDecided = difficultySelected
-//        hardQuizVC.user = user
-//        self.navigationController?.pushViewController(hardQuizVC, animated: true)
-//    }
+    func toHardLevel(){
+        //to navigate to next screen - hard quiz
+        let hardQuizVC:HardQuizViewController = self.storyboard?.instantiateViewController(withIdentifier: "HardQuizViewController") as! HardQuizViewController
+        hardQuizVC.categoryDecided = category
+        hardQuizVC.difficultyDecided = difficultySelected
+        hardQuizVC.user = user
+        self.navigationController?.pushViewController(hardQuizVC, animated: true)
+    }
     
     /*
     // MARK: - Navigation
