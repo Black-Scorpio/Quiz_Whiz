@@ -45,7 +45,7 @@ class UserViewController: UIViewController {
                 showAlert(withTitle: "Invalid Name Length", message: "Username must be up to 10 characters long.")
             }
         } else {
-            showAlert(withTitle: "Empty Name", message: "Please enter a valid username.")
+            showAlert(withTitle: "Empty Name", message: "Please enter a valid username and save.")
         }
     }
     

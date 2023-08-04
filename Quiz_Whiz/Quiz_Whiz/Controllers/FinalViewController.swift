@@ -19,6 +19,15 @@ class FinalViewController: UIViewController {
     
     var questionCount:Int!
     
+    var sadImages: [String] = ["sad", "sad2", "sad3"]
+    var happyImages: [String] = ["happy", "happy2", "happy3"]
+    
+    // Function to return a random image from the image array's
+    func getRandomImage(from array: [String]) -> String {
+        let randomIndex = Int.random(in: 0..<array.count)
+        return array[randomIndex]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
@@ -26,9 +35,11 @@ class FinalViewController: UIViewController {
         let count = questionCount ?? 10
         scoreLabel.text = "\(String(user.score))/\(count)!"
         if (Double(user.score) / Double(count)) > 0.5  {
-                finalScoreImage.image = UIImage(named: "happy")
+            let happyImage = getRandomImage(from: happyImages)
+                finalScoreImage.image = UIImage(named: happyImage)
             } else {
-                finalScoreImage.image = UIImage(named: "sad")
+                let sadImage = getRandomImage(from: sadImages)
+                finalScoreImage.image = UIImage(named: sadImage)
             }
     }
     
