@@ -12,15 +12,22 @@ class Quiz
     var animalQuestions: [String]
     var animalAnswers: [[String]]
     var animalCorrectAnswer: [Int]
+    var animalImages: [String]
+    
     var musicQuestions: [String]
     var musicAnswers: [[String]]
     var musicCorrectAnswer: [Int]
+    var musicImages: [String]
+    
     var programmingQuestions: [String]
     var programmingAnswers: [[String]]
     var programmingCorrectAnswer: [Int]
+    var programmingImages: [String]
+    
     var randomQuestions: [String]
     var randomAnswers: [[String]]
     var randomCorrectAnswer: [Int]
+    var randomImages: [String]
 
 
     init() {
@@ -48,6 +55,7 @@ class Quiz
             ["Chicken", "Duck", "Fish", "Parrot"],
             ["King Cobra", "Cape Buffalo", "Swan", "Mosquito"]]
         self.animalCorrectAnswer = [3,4,1,3,4,3,4,2,1,4]
+        self.animalImages = ["octopus", "cow", "shark", "red panda", "wolf", "coconut", "dog", "kangaroo", "dinosaur", "deadliest"]
         
         //Initializing the Questions and Answers for the music category
         self.musicQuestions = [
@@ -75,6 +83,7 @@ class Quiz
             ["Busta Rhymes", "Eminem", "50 Cent", "Kanye West"]
           ];
         self.musicCorrectAnswer = [4,1,2,3,3,2,1,1,2,2]
+        self.musicImages = ["billboard", "avengers", "ball", "eminem", "classic", "grammys", "spongebob", "wutang", "marvel", "words"]
         
         //Initializing the Questions and Answers for the programming category
         self.programmingQuestions = [
@@ -103,6 +112,7 @@ class Quiz
             ["=", "==", "++", "!="]
           ];
         self.programmingCorrectAnswer = [3,4,2,2,1,4,1,3,4,3]
+        self.programmingImages = ["penguin", "swift", "binding", "python", "list", "thread", "code", "android", "algorithm", "relational"]
         
         //Initializing the Questions and Answers for the random facts category
         self.randomQuestions = [
@@ -130,6 +140,7 @@ class Quiz
             ["1", "2", "3", "4"]
           ];
         self.randomCorrectAnswer = [3,1,2,2,4,4,2,3,1,2]
+        self.randomImages = ["seuss", "donut", "fastfood", "jello", "sesame street", "text", "question mark", "calories", "strawberry", "number pad"]
        
 
     }

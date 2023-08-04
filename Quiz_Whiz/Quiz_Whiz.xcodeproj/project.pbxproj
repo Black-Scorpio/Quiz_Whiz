@@ -24,6 +24,8 @@
 		81D3154C2A5DAC670069E140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D3154A2A5DAC670069E140 /* Main.storyboard */; };
 		81D3154E2A5DAC680069E140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D3154D2A5DAC680069E140 /* Assets.xcassets */; };
 		81D315512A5DAC680069E140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81D3154F2A5DAC680069E140 /* LaunchScreen.storyboard */; };
+		FE8806F02A7CCCB3007D2892 /* MediumQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8806EF2A7CCCB3007D2892 /* MediumQuizViewController.swift */; };
+		FE8806F22A7CCD47007D2892 /* HardQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8806F12A7CCD47007D2892 /* HardQuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		81D3154D2A5DAC680069E140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81D315502A5DAC680069E140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81D315522A5DAC680069E140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE8806EF2A7CCCB3007D2892 /* MediumQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumQuizViewController.swift; sourceTree = "<group>"; };
+		FE8806F12A7CCD47007D2892 /* HardQuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardQuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				811DF4E22A76D78700D7977D /* FinalViewController.swift */,
 				5FE60BD42A76E13300737F78 /* QuizViewController.swift */,
 				022FC0682A79BAA500165459 /* EasyQuizViewController.swift */,
+				FE8806EF2A7CCCB3007D2892 /* MediumQuizViewController.swift */,
+				FE8806F12A7CCD47007D2892 /* HardQuizViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				5FE60BD52A76E13300737F78 /* QuizViewController.swift in Sources */,
 				5FE301AC2A7750FD00730752 /* Difficulty.swift in Sources */,
 				811DF4E32A76D78700D7977D /* FinalViewController.swift in Sources */,
+				FE8806F02A7CCCB3007D2892 /* MediumQuizViewController.swift in Sources */,
 				811DF4E12A76CFBE00D7977D /* UserViewController.swift in Sources */,
 				81D315452A5DAC670069E140 /* AppDelegate.swift in Sources */,
 				811DF4DC2A76CB5300D7977D /* User.swift in Sources */,
@@ -200,6 +207,7 @@
 				81D315472A5DAC670069E140 /* SceneDelegate.swift in Sources */,
 				811DF4DF2A76CD4400D7977D /* HomeViewController.swift in Sources */,
 				5FD530B62A74D277005C7121 /* DifficultiesViewController.swift in Sources */,
+				FE8806F22A7CCD47007D2892 /* HardQuizViewController.swift in Sources */,
 				5F45091C2A76F08E006341EA /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
