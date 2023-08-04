@@ -28,6 +28,7 @@ class FinalViewController: UIViewController {
         return array[randomIndex]
     }
     
+    //Loads in the final score from the previous view/changes background color and image
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
@@ -37,9 +38,11 @@ class FinalViewController: UIViewController {
         if (Double(user.score) / Double(count)) > 0.5  {
             let happyImage = getRandomImage(from: happyImages)
                 finalScoreImage.image = UIImage(named: happyImage)
+            self.view.backgroundColor = UIColor.green
             } else {
                 let sadImage = getRandomImage(from: sadImages)
                 finalScoreImage.image = UIImage(named: sadImage)
+                self.view.backgroundColor = UIColor.red
             }
     }
     
@@ -60,10 +63,9 @@ class FinalViewController: UIViewController {
         self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
-    
+    //Navigate back to the UserViewController
     @IBAction func playAgainTapped(_ sender: UIButton) {
         let categoryVC = self.storyboard?.instantiateViewController(withIdentifier: "CategoryVC") as! CategoriesViewController
-        // Navigating to UserViewController
         user.score = 0
         categoryVC.user = user
         self.navigationController?.pushViewController(categoryVC, animated: true)
