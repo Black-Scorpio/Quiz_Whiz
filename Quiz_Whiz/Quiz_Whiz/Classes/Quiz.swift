@@ -7,8 +7,10 @@
 
 import Foundation
 
+//The quiz class is responsible for the data stored by the quiz and can be accessed in one place
 class Quiz
 {
+    //instance variables
     var animalQuestions: [String]
     var animalAnswers: [[String]]
     var animalCorrectAnswer: [Int]
